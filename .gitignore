@@ -1,0 +1,5 @@
+SFML-2.4.0/
+sfml-*
+openal32.dll
+*.o
+.vscode/

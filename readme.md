@@ -1,4 +1,5 @@
 #Setup
+https://www.gamefromscratch.com/page/Game-From-Scratch-CPP-Edition-Part-3.aspx
 
 1. Download SFML: https://www.sfml-dev.org/download/sfml/2.5.1/
     I downloaded "GCC 7.3.0 MinGW (DW2) - 32-bit"
@@ -17,8 +18,8 @@
 g++ -c pang.cpp Game.cpp MainMenu.cpp SplashScreen.cpp  -Ic:\MinGW\include
 
 #to link
-g++ pang.o Game.o MainMenu.o SplashScreen.o -o smfl-app -L"C:\Users\jerem\Documents\Git_projects\Gaming\Tutorial - C++\SFML-2.4.0\lib" -lsfml-window -lsfml-system -lsfml-window -lsfml-graphics
+g++ pang.o Game.o MainMenu.o SplashScreen.o -o sfml-app -L"C:\Users\jerem\Documents\Git_projects\Gaming\Tutorial - C++\SFML-2.4.0\lib" -lsfml-window -lsfml-system -lsfml-window -lsfml-graphics
 
 #to run
-.\smfl-app.exe
+.\sfml-app.exe
 

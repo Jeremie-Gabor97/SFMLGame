@@ -1,4 +1,5 @@
 #include "GameObjectManager.h"
+#include "Game.h"
 
 GameObjectManager::GameObjectManager(){}
 
@@ -34,6 +35,17 @@ void GameObjectManager::DrawAll(sf::RenderWindow &renderWindow){
     std::map<std::string,VisibleGameObject*>::const_iterator itr = _gameObjects.begin();
     while(itr != _gameObjects.end()){
         itr->second->Draw(renderWindow);
+        itr++;
+    }
+}
+
+void GameObjectManager::UpdateAll(){
+    std::map<std::string,VisibleGameObject*>::const_iterator itr = _gameObjects.begin();
+    sf::Time time = Game::clock.restart();
+    float timeDelta = time.asSeconds();
+
+    while(itr != _gameObjects.end()){
+        itr->second->Update(timeDelta);
         itr++;
     }
 }
